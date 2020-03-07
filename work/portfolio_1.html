@@ -66,13 +66,13 @@
 	<div id="fh5co-page">
 		<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
 		<aside id="fh5co-aside" role="complementary" class="border js-fullheight">
-				<h1 id="fh5co-logo"><a href="../index.html">Ethanlogue</a></h1>
+				<h1 id="fh5co-logo"><a href="../templates/index.html">Ethanlogue</a></h1>
 			<nav id="fh5co-main-menu" role="navigation">
 				<ul>
-					<li><a href="../index.html">Home</a></li>
+					<li><a href="../templates/index.html">Home</a></li>
 					<li><a href="https://blog.naver.com/cheerfuldong">Blog</a></li>
-					<li class="fh5co-active"><a href="../portfolio.html">portfolio</a></li>
-					<li><a href="../about.html">About</a></li>
+					<li class="fh5co-active"><a href="../templates/portfolio.html">portfolio</a></li>
+					<li><a href="../templates/about.html">About</a></li>
 				</ul>
 			</nav>
 	
@@ -120,7 +120,93 @@
 										<center>
 										<img src="work/1.starbucks/starbucks.PNG" class="img-responsive">	
 										</center>
-								</div>
+									</div>
+									</br>
+									<script src="https://d3js.org/d3.v5.min.js"></script>
+									<script src="https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.js"></script>
+									<script src="https://www.example.com/javascripts/api/tableau-2.js"></script>
+
+									<div class='tableauPlaceholder' 
+									id='viz1583569243120' style='position: relative'>
+									<noscript><a href='#'>
+										<img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;St&#47;StarbuksvsEdiya2019&#47;1&#47;1_rss.png' style='border: none' /></a>
+									</noscript>
+									<object class='tableauViz'  style='display:none;'>
+										<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+										<param name='embed_code_version' value='3' /> <param name='site_root' value='' />
+										<param name='name' value='StarbuksvsEdiya2019&#47;1' />
+										<param name='tabs' value='no' />
+										<param name='toolbar' value='yes' />
+										<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;St&#47;StarbuksvsEdiya2019&#47;1&#47;1.png' /> 
+										<param name='animate_transition' value='yes' />
+										<param name='display_static_image' value='yes' />
+										<param name='display_spinner' value='yes' />
+										<param name='display_overlay' value='yes' />
+										<param name='display_count' value='yes' />
+										<param name='filter' value='publish=no' />
+									</object>
+									</div>                
+									<script type='text/javascript'>
+									var divElement = document.getElementById('viz1583569243120');
+									var vizElement = divElement.getElementsByTagName('object')[0];                    
+									vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    
+									var scriptElement = document.createElement('script');                    
+									scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+									vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+									</script>
+									<p>
+									<div id="bubbleChart"></div>
+									<script>
+										var chart = bb.generate({
+											data: {
+												columns: [
+												["강남", 30, 350, 200, 380, 150, 250, 50, 80, 55, 220],
+												["서초", 130, 100, 10, 200, 80, 50, 200, 123, 185, 98],
+												["송파", 230, 153, 85, 300, 250, 120, 5, 84, 99, 289]
+												],
+												type: "bubble",
+												labels: true
+											},
+											bubble: {
+												maxR: 50
+											},
+											axis: {
+												x: {
+												type: "category"
+												},
+												y: {
+												max: 450
+												}
+											},
+											bindto: "#bubbleChart"
+											});
+
+										setTimeout(function() {
+												chart.load({
+													columns: [
+														["강남", 100, 50, 150, 200, 100, 350, 58, 210, 80, 126]
+													]
+												});
+											}, 1000);
+
+										setTimeout(function() {
+												chart.load({
+													columns: [
+														["서초", 305, 350, 55, 25, 335, 29, 258, 310, 180, 226]
+													]
+												});
+											}, 2000);
+
+										setTimeout(function() {
+												chart.load({
+													columns: [
+														["송파", 223, 121, 259, 247, 53, 159, 95, 111, 307, 337]
+													]
+												});
+											}, 3000);
+									</script>
+									</p>
+								</div>						
 							</div>
 						</div>
 					</div>
